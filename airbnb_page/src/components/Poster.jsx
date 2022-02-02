@@ -14,4 +14,4 @@ const Poster = () => (
     </section>
 );
 
-export default Poster;
+export { Poster };
