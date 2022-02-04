@@ -2,7 +2,8 @@ import { Children } from "./components";
 import { NavBar } from "./components";
 import { Poster } from "./components";
 import { Card } from "./components";
-import Hooks from "./Hooks";
+import useStateHook from "./hooks/useStateHook";
+import UseEffectHook from "./hooks/useEffect";
 import data from "./data";
 function App() {
     // Valores enviados a el componente Children para probar el spread syntax
@@ -16,23 +17,21 @@ function App() {
     });
     return (
         <div>
-            <NavBar />
-            <section>
-                {" "}
-                <Poster />
-            </section>
+            {/* <NavBar /> */}
+            <section> {/* <Poster /> */}</section>
             {/* <Card /> */}
-            <section className="cards-list">{cards}</section>
+            {/* <section className="cards-list">{cards}</section> */}
 
-            <Children
+            {/* <Children
                 one={nameOne}
                 two={nameTwo}
                 three={nameThree}
                 four={nameFour}
-            />
+            /> */}
 
-            {/* Componente utilizado para ver algunos trucos de los Hooks de React */}
-            <Hooks />
+            {/* Componentes utilizados para ver algunos trucos de los Hooks de React */}
+            {/* <useStateHook /> */}
+            <UseEffectHook id={3} />
         </div>
     );
 }
