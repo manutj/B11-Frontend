@@ -10,9 +10,13 @@ function Card(props) {
 
             {/* En este div se debe mostrar el texto del ejercicio */}
             {/* {<div className="card--badge"></div>} */}
-            <img src={props.item.coverImg} className="card--image" />
+            <img
+                src={props.item.coverImg}
+                className="card--image"
+                alt="card badge"
+            />
             <div className="card--stats">
-                <img src={StarImage} className="card--star" />
+                <img src={StarImage} className="card--star" alt="card stats" />
                 <span>{props.item.stats.rating}</span>
                 <span className="gray">
                     ({props.item.stats.reviewCount}) •{" "}

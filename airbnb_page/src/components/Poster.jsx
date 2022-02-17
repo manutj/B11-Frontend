@@ -1,7 +1,7 @@
 import collage from "../images/cards-photos.png";
 const Poster = () => (
     <section>
-        <img className="poster--collage" src={collage} />
+        <img className="poster--collage" src={collage} alt="item" />
         <h1 className="poster--title">
             Lorem ipsum dolor sit amet consectetur, adipisicing elit
         </h1>

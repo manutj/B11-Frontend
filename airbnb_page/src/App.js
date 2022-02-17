@@ -1,20 +1,20 @@
-import { Children } from "./components";
-import { NavBar } from "./components";
-import { Poster } from "./components";
-import { Card } from "./components";
-import useStateHook from "./hooks/useStateHook";
+// import { Children } from "./components";
+// import { NavBar } from "./components";
+// import { Poster } from "./components";
+// import { Card } from "./components";
+// import useStateHook from "./hooks/useStateHook";
 import UseEffectHook from "./hooks/useEffect";
-import data from "./data";
+// import data from "./data";
 function App() {
     // Valores enviados a el componente Children para probar el spread syntax
-    const nameOne = "andrea 👱";
-    const nameTwo = "Andres 🙍";
-    const nameThree = "Carlos 🧔";
-    const nameFour = "Monica 🧑‍🦳";
+    // const nameOne = "andrea 👱";
+    // const nameTwo = "Andres 🙍";
+    // const nameThree = "Carlos 🧔";
+    // const nameFour = "Monica 🧑‍🦳";
 
-    const cards = data.map((item) => {
-        return <Card key={item.id} item={item} />;
-    });
+    // const cards = data.map((item) => {
+    //     return <Card key={item.id} item={item} />;
+    // });
     return (
         <div>
             {/* <NavBar /> */}

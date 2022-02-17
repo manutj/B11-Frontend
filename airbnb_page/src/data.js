@@ -1,7 +1,7 @@
 import CardImage1 from "./images/card-img.png";
 import CardImage2 from "./images/card-img-2.png";
 import CardImage3 from "./images/card-img-3.png";
-export default [
+const data = [
     {
         id: 1,
         title: "Lorem Ipsum description",
@@ -49,3 +49,5 @@ export default [
         country: "U.K",
     },
 ];
+
+export default data;

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
-import Hello from "../components/Hello";
+// import Hello from "../components/Hello";
 
 export default function UseEffectHook(props) {
     // const [count, setCount] = useState(0);
@@ -10,8 +10,6 @@ export default function UseEffectHook(props) {
     const [users, setUsers] = useState([]);
     const [user, setUser] = useState({});
     const [currentId, setCurrentId] = useState(1);
-
-    const controller = new AbortController();
 
     // useEffect(() => {
     //     // AQUI PODEMOS VISUALIZAR EL OBJETO DEL PERSONAJE QUE TRAE LA PROMESA PERO NO PODEMOS ACCEDER A SUS PROPIEDADES
@@ -33,6 +31,7 @@ export default function UseEffectHook(props) {
     // }, [props.id]);
 
     useEffect(() => {
+        const controller = new AbortController();
         const endpoint = "https://jsonplaceholder.typicode.com/todos";
         axios
             .get(endpoint, {
@@ -43,13 +42,13 @@ export default function UseEffectHook(props) {
     }, []);
 
     useEffect(() => {
+        const controller = new AbortController();
         const endpoint = "https://jsonplaceholder.typicode.com/todos";
         axios
             .get(`${endpoint}/${currentId}`, {
                 signal: controller.signal,
             })
-            .then(({ data }) => setUser(data))
-            .then(() => user.completed.toString());
+            .then(({ data }) => setUser(data));
 
         return () => controller.abort();
     }, [currentId]);
@@ -89,7 +88,7 @@ export default function UseEffectHook(props) {
         <div>
             <div>
                 <h2>{user.title}</h2>
-                <p>Occupped: {user.completed}</p>
+                <p>Occupped: {String(user.completed)}</p>
 
                 <button onClick={Previous}>Anterior</button>
                 <button onClick={Next}>Siguiente</button>
