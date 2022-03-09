@@ -1,3 +1,10 @@
 .a__button {
-    background-color: aqua;
+  width: 200px;
+  height: 40px;
+  background-color: purple;
+  border: none;
+  border-radius: 8px;
+  color: #f1e5e5;
+  font-size: 40px;
 }
+/*# sourceMappingURL=Button.css.map */

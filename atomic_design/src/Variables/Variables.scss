@@ -1,0 +1,14 @@
+$blackColor: rgb(24, 24, 24);
+$titleSize: 25px;
+$color: rgb(241, 229, 229);
+$fontFamilyNav: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+
+@mixin genericButtonStyles($backgroundColor, $fontSize) {
+    width: 200px;
+    height: 40px;
+    background-color: $backgroundColor;
+    border: none;
+    border-radius: 8px;
+    color: $color;
+    font-size: $fontSize;
+}

@@ -1,0 +1,11 @@
+@import "../../../Variables/Variables.scss";
+// .a__button {
+//     background-color: $blackColor;
+//     font-size: $titleSize;
+//     border: none;
+//     color: $color;
+// }
+
+.a__button {
+    @include genericButtonStyles(purple, 40px);
+}

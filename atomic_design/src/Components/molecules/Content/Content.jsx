@@ -7,7 +7,7 @@ import Image from "../../atoms/Image/Image";
 const Content = (props) => (
     <div className="m__Content">
         <Image src={props.image.src} alt={props.image.alt} />
-        <Title text={props.title} />
+        <Title title={props.title} />
         <Paragraph text={props.text} />
     </div>
 );

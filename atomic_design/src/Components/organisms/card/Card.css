@@ -1,0 +1,52 @@
+.card {
+  padding: 0 5em;
+}
+
+.card__img {
+  display: block;
+  height: 100px;
+  width: 100%;
+  background-color: #f892a3;
+}
+
+.card__content {
+  padding: 1.5em;
+  background-color: white;
+}
+
+.card__list {
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.card__item {
+  padding: 0.3em 0.5em;
+  margin-right: 0.5em;
+  background-color: #e6d3d3;
+  border-radius: 0.3em;
+  font-size: 1em;
+}
+
+.card__item--active {
+  background-color: #5b6e6b;
+  font-weight: bold;
+}
+
+.card__link {
+  background-color: #2c8973;
+  color: white;
+  text-decoration: none;
+  padding: 0.5em 0.3em;
+  border-radius: 0.5em;
+  margin-top: 0.5em;
+  display: inline-block;
+}
+
+.card__link:hover {
+  background-color: #267764;
+}
+/*# sourceMappingURL=Card.css.map */

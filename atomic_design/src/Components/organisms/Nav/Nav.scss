@@ -1,0 +1,28 @@
+@import "../../../Variables/Variables.scss";
+
+.navBar {
+    width: 100%;
+    height: 80px;
+    background-color: $blackColor;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    // a {
+    //     font-family: $fontFamilyNav;
+    //     color: $color;
+    //     font-size: $titleSize;
+    //     margin: 10px;
+    // }
+}
+
+.navBar a {
+    font-family: $fontFamilyNav;
+    color: $color;
+    font-size: $titleSize;
+    margin: 10px;
+}
+
+// .navBar__links {
+//     color: white;
+// }
