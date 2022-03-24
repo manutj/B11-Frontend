@@ -26,7 +26,7 @@ function App() {
         <div className="App">
             <h1>People List</h1>
             <List people={people} />
-            <AddToList />
+            <AddToList setPeople={setPeople} people={people} />
         </div>
     );
 }
