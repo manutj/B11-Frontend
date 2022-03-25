@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import { PState as IProps } from "../App";
 
 // const List = ({ people }: IProps) => {

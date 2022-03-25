@@ -90,3 +90,17 @@
     color: white;
     border: none;
 }
+
+.darkContent {
+    background-color: #000;
+    color: #fff;
+}
+
+.lightContent {
+    background-color: rgb(216, 216, 216);
+}
+
+.switch {
+    justify-content: center;
+    align-items: center;
+}

@@ -1,7 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import "./App.css";
-import AddToList from "./components/AddToList";
-import List from "./components/List";
+// import AddToList from "./components/AddToList";
+// import List from "./components/List";
+// import Switch from "./components/Switch";
+import Container from "./components/Container";
+import { DarkModeProvider } from "./context/DarkModeContext";
 
 export interface PState {
     people: {
@@ -23,11 +26,12 @@ function App() {
     ]);
 
     return (
-        <div className="App">
-            <h1>People List</h1>
-            <List people={people} />
-            <AddToList setPeople={setPeople} people={people} />
-        </div>
+        <DarkModeProvider>
+            <div className="App">
+                <h1>People List</h1>
+                <Container people={people} setPeople={setPeople} />
+            </div>
+        </DarkModeProvider>
     );
 }
 
