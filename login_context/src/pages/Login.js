@@ -1,12 +1,24 @@
 import React, { useState } from "react";
+import { UseAuthStateContext, useAuthDispatch } from "../context/context";
+import { loginUser } from "../context/actions";
 
-const handleClick = () => {
-    console.log("Click");
-};
-
-const Login = () => {
+const Login = (props) => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+    const dispatch = useAuthDispatch();
+    const { loading } = UseAuthStateContext();
+
+    const handleClick = async (e) => {
+        e.preventDefault();
+        try {
+            let response = await loginUser(dispatch, { email, password });
+            if (!response.role) return;
+            props.history.push("/dashboard");
+        } catch (error) {
+            console.log(error);
+        }
+    };
+
     return (
         <div>
             <div>
@@ -15,7 +27,12 @@ const Login = () => {
                     <div>
                         <div>
                             <label>Username</label>
-                            <input type={"text"} id={"email"} value={email} />
+                            <input
+                                type={"text"}
+                                id={"email"}
+                                value={email}
+                                onChange={(e) => setEmail(e.target.value)}
+                            />
                         </div>
                         <div>
                             <label>Password</label>
@@ -23,10 +40,13 @@ const Login = () => {
                                 type={"password"}
                                 id={"password"}
                                 value={password}
+                                onChange={(e) => setPassword(e.target.value)}
                             />
                         </div>
                     </div>
-                    <button onClick={handleClick}>Login</button>
+                    <button onClick={handleClick} disabled={loading}>
+                        Login
+                    </button>
                 </form>
             </div>
         </div>

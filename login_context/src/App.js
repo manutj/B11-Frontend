@@ -1,12 +1,8 @@
 import React from "react";
-import {
-    BrowserRouter as Router,
-    Switch,
-    Route,
-    Link,
-    Routes,
-} from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import routes from "./routes/routes";
+import AppRoutes from "./components/AppRoutes";
+import { AuthProvider } from "./context/context";
 import "./App.css";
 
 function App() {
@@ -38,19 +34,20 @@ function App() {
     //     );
     // }
     return (
-        <div className="App">
+        <AuthProvider>
             <Router>
-                <Routes>
+                <Switch>
                     {routes.map((route) => (
-                        <Route
+                        <AppRoutes
+                            key={route.path}
                             path={route.path}
                             component={route.component}
-                            key={route.path}
+                            isPrivate={route.isPrivate}
                         />
                     ))}
-                </Routes>
+                </Switch>
             </Router>
-        </div>
+        </AuthProvider>
     );
 }
 
